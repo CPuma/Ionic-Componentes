@@ -40,6 +40,24 @@ export class InicioPage implements OnInit {
       name: 'CheckBox',
       redirectTo: '/check'
     }
+    ,
+    {
+      icon: 'calendar',
+      name: 'DateTime',
+      redirectTo: '/date-time'
+    }
+    ,
+    {
+      icon: 'car',
+      name: 'Fabs',
+      redirectTo: '/fab'
+    }
+    ,
+    {
+      icon: 'grid',
+      name: 'Grid - Rows',
+      redirectTo: '/grid'
+    }
   ]
 
   constructor() { }

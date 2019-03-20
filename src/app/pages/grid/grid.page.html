@@ -1,0 +1,72 @@
+<app-header titulo="Grid Row"></app-header>
+
+<ion-content padding>
+    
+    <ion-grid>
+        <ion-header><ion-label>Row con 12 . tamaño automatico</ion-label></ion-header>
+        <hr>
+        <ion-row>
+            <ion-col *ngFor="let c of [1,1,1,1,1,1,1,1,1,1,1,1];let i = index"
+            color="warning">
+                {{i + 1}}
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <hr>
+    <hr>
+    
+    <ion-grid>
+        <ion-header><ion-label>Si el texto es muy grande, ionic crea otra lina</ion-label></ion-header>
+        <hr>
+        <ion-row>
+            <ion-col *ngFor="let c of [1,1,1,1,1,1,1,1,1,1,1,1];let i = index"
+            color="primary">
+                Hola {{i + 1}}
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <hr>
+    <hr>
+    <ion-grid>
+            <ion-header><ion-label>Cards Sin Controlar Numero por linea</ion-label></ion-header>
+            <hr>
+            <ion-row>
+                <ion-col  *ngFor="let c of [1,1,1,1,1,1];">
+                    <ion-card>
+                        <ion-img src="../../../assets/img/rocket.jpeg"></ion-img>
+                    </ion-card>
+                    <ion-card-header>
+                        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                        <ion-card-title>Card Title</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                            qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem
+                    </ion-card-content>
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-grid>
+                <ion-header><ion-label>Cards Controlo . Size en ion-Col</ion-label></ion-header>
+                <hr>
+                <ion-row>
+                    <ion-col  size="6" size-lg="2" size-md="3" size-sm="4" size-xs="6"
+                    *ngFor="let c of [1,1,1,1,1,1];">
+                        <ion-card>
+                            <ion-img src="../../../assets/img/rocket.jpeg"></ion-img>
+                        </ion-card>
+                        <ion-card-header>
+                            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                            <ion-card-title>Card Title</ion-card-title>
+                        </ion-card-header>
+                        <ion-card-content>
+                                qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem
+                        </ion-card-content>
+    
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+
+</ion-content>

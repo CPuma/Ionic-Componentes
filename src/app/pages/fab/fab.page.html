@@ -1,0 +1,61 @@
+<app-header titulo="Fabs"></app-header>
+
+<ion-content padding>
+
+  <!-- PRIMERU FAB - con colores predeterminados -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="top">
+      <ion-fab-button><ion-icon name="logo-facebook"  color="primary"></ion-icon> </ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-twitter"   color="secondary"></ion-icon> </ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-youtube"   color="danger"></ion-icon> </ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-instagram" color="tertiary"></ion-icon> </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="start">
+        <ion-fab-button><ion-icon name="logo-vimeo"  color="primary"></ion-icon> </ion-fab-button>
+        <ion-fab-button><ion-icon name="logo-google"   color="danger"></ion-icon> </ion-fab-button>
+        <ion-fab-button><ion-icon name="logo-github"   color="black"></ion-icon> </ion-fab-button>
+      </ion-fab-list>
+  </ion-fab>
+  <!-- ================================================== -->
+
+<!-- SEGUNDO FAB CON COLORES PERZONALIZADOS EN theme/variables.scss -->
+  <ion-fab vertical="top" horizontal="start" slot="fixed">
+
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="bottom">
+      <ion-fab-button><ion-icon name="logo-android"  color="android"></ion-icon> </ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-windows"  color="windows"></ion-icon> </ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-apple"    color="apple"></ion-icon> </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="end">
+        <ion-fab-button color="css3"        ><ion-icon name="logo-css3"   ></ion-icon> </ion-fab-button>
+        <ion-fab-button color="html5"       ><ion-icon name="logo-html5"    ></ion-icon> </ion-fab-button>
+        <ion-fab-button color="javascript"  ><ion-icon name="logo-javascript"    ></ion-icon> </ion-fab-button>
+      </ion-fab-list>
+  </ion-fab>
+<!-- ================================================ -->
+
+
+<ion-list>
+    <ion-item *ngFor="let i of data; let index = index">
+      Item {{index}}
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      ESTE ES EL FOOTER
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

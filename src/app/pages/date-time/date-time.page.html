@@ -1,0 +1,69 @@
+<app-header titulo="DateTime"></app-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-list-header  color="light">
+      <ion-label color="primary">Forma Basica- con error ISO FORMAT</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Fecha de Nacimiento</ion-label>
+      <ion-datetime placeHolder="Nacimiento" 
+        value="{{fechaNaci1 | date: 'yyyy-MM-dd'}}" 
+        display-format="DD MMMM YYYY"
+        cancelText="Cancelar!!!" 
+        [(ngModel)]="fechaNaci1" 
+        (ionChange)="cambioFecha1($event)" 
+        month-names="Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre">
+      </ion-datetime>
+    </ion-item>
+    <hr>
+    <ion-list-header  color="light">
+        <ion-label color="primary">Mejor forma- Pero se debe formatear el DATE despues</ion-label>
+    </ion-list-header>
+    <ion-item >
+      <ion-label>Fecha de Nacimiento</ion-label>
+      <ion-datetime placeHolder="Nacimiento" 
+       display-format="DD MMMM YYYY"
+        cancelText="Cancelar!!!" 
+        [ngModel]="fechaNaci2.toISOString()" 
+        (ionChange)="cambioFecha2($event)" 
+        month-names="Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre">
+      </ion-datetime>
+    </ion-item>
+    <hr>
+    <ion-list-header color="light">
+      <ion-label color="primary">Restricciones</ion-label>
+    </ion-list-header>
+    <ion-item >
+      <ion-label color="danger">No valida Fecha.31 febrero existe CUIDADO</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Min Y Max</ion-label>
+      <ion-datetime placeholder="yyyy-mm-dd"
+      display-format="YYYY MMMM DD"
+      min="2015-01-01"
+      max="2015-12-31">
+      </ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Años</ion-label>
+      <ion-datetime placeholder="YYYY"
+      display-format="YYYY"
+      min="2015"
+      max="2025"
+      value="2019" >
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Custom Picker</ion-label>
+        <ion-datetime [pickerOptions]="customPickerOptions"
+                      display-format="DD MMMM YYYY"
+
+                      [(ngModel)]="customDate">
+        </ion-datetime>
+      </ion-item>
+  </ion-list>
+
+</ion-content>
