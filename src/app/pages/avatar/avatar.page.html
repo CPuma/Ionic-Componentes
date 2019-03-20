@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>AVATAR</ion-title>
+
+    <ion-item slot="end" lines="none"> <!-- LINEs -->
+      <ion-avatar >
+        <img src="../../../assets/img/stanlee.jpg">
+      </ion-avatar>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Deben ir dentro de :</h3>
+  <ion-item-divider>
+    ION-ITEM
+  </ion-item-divider>
+  <ion-list>
+    <ion-item *ngFor="let i of [1,1,1]">
+      <ion-avatar slot="start">
+        <img src="../../../assets/img/imgroot" />
+      </ion-avatar>
+      <ion-label>Im Groot</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-item-divider>
+    ION-CHIP
+  </ion-item-divider>
+  <ion-chip color="secondary" *ngFor="let i of [1,1,1]">
+    <ion-avatar>
+      <img src="../../../assets/img/rocket.jpeg">
+    </ion-avatar>
+    <ion-label>Rocket</ion-label>
+  </ion-chip>
+</ion-content>

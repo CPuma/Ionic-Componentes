@@ -1,0 +1,15 @@
+<app-header titulo="checkBox"></app-header>
+
+<ion-content padding>
+<p>Si el evento CLICK se coloca en el ion-CHECKBOX , nos devolvera el estado antes del click (antes que cambie).<br>
+  Si se coloca en el ion-ITEM del checkbox, nos devolvera el estado actual 
+</p>
+  <ion-list>
+    <ion-item *ngFor="let ch of data" (click)="onClick( ch )">
+      <ion-label>{{ch.name}}</ion-label>
+      <ion-checkbox [(ngModel)]="ch.selected" slot="end" [color]="ch.name"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

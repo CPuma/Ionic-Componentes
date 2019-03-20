@@ -1,0 +1,26 @@
+<!-- HEADER -->
+<app-header [titulo]="titulo|| 'alert page' "></app-header>
+<!-- ==================== -->
+<ion-content padding>
+  <h1>Alert PAGE</h1>
+  <ion-item-divider>
+      <ion-label>
+        tarea
+      </ion-label>
+    </ion-item-divider>
+  <ion-button color="primary" (click)="TAREA()" expand="full"> TAREA</ion-button>
+
+  <ion-item-divider>
+      <ion-label>
+        Muestras
+      </ion-label>
+    </ion-item-divider>
+
+  <ion-button color="primary" (click)="presentAlert()" expand="full"> Alerta SImple</ion-button>
+  <ion-button color="secondary" (click)="presentAlertCheckbox()" expand="full">Alerta con CheckBOx</ion-button>
+  <ion-button color="danger" (click)="presentAlertConfirm()" expand="full">Alerta para Confirmacion</ion-button>
+  <ion-button color="warning" (click)="presentAlertMultipleButtons()" expand="full">Alerta con Botones</ion-button>
+  <ion-button color="success" (click)="presentAlertPrompt()" expand="full">Alerta con Prompt</ion-button>
+  <ion-button color="dark" (click)="presentAlertRadio()" expand="full">Alerta con Radio</ion-button>
+
+</ion-content>
