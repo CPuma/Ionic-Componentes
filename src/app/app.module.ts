@@ -10,6 +10,9 @@ import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { ComponentsModule } from "./components/components.module";
 
+// para trabajr con peticiones http
+import { HttpClientModule} from '@angular/common/http';
+
 @NgModule({
     declarations: [ AppComponent ],
     entryComponents: [],
@@ -18,7 +21,10 @@ import { ComponentsModule } from "./components/components.module";
         IonicModule.forRoot(),
         AppRoutingModule,
         // components
-        ComponentsModule
+        ComponentsModule,
+
+        // para  trabajar con peticiones http
+        HttpClientModule
     ],
     providers: [
         StatusBar,

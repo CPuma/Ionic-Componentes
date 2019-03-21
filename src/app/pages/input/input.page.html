@@ -1,0 +1,54 @@
+<app-header titulo="Inputs - Formularios"></app-header>
+<ion-content padding>
+
+  <!-- FORMULARIO TEMPLATE (#formulario con #) LOS INPUT DEBEN TENER "NAME" c/u  OBLIGATORIO -->
+  <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate()">
+    <ion-list>
+      <ion-list-header> <ion-title color="{{formulario.valid ? 'primary':'danger'}}">Formulario Template :
+        {{formulario.valid ? ' Valido' :' No valido'}} </ion-title> </ion-list-header>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" name="email" [(ngModel)]="usuario.email" required
+          pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="password" name="password" [(ngModel)]="usuario.password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="full" type="submit" color="{{formulario.invalid ? 'danger': 'primary'}}"
+      [disabled]="formulario.invalid">LOGIN</ion-button>
+  </form>
+  <hr>
+  <hr>
+  <hr>
+  <ion-list>
+    <ion-list-header>
+      <ion-label size="lg" color="tertiary">Inputs + Positions del label + (lines) del Item</ion-label>
+    </ion-list-header>
+    <ion-item   lines="full">
+      <ion-label color="windows" position="stacked">stacked + (full)</ion-label>
+      <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+    <ion-item   lines="none">
+      <ion-label color="android" position="fixed">fixed+(none)></ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item   lines="inset">
+      <ion-label color="html5" position="floating">floating + (inset)</ion-label>
+      <ion-input type="number" [(ngModel)]="ruc"></ion-input>
+    </ion-item>
+  </ion-list>
+  <hr>
+  <hr>
+  <hr>
+
+  <ion-item> <ion-label color="windows">Nombre : </ion-label> {{  nombre || 'No hay Nombre'}}
+  </ion-item>
+  <ion-item> <ion-label color="android">Password: </ion-label> {{  password || 'No hay Password'}}
+  </ion-item>
+  <ion-item> <ion-label color="html5">RUC: </ion-label> {{ruc || 'No hay RUC'}}
+  </ion-item>
+
+
+</ion-content>

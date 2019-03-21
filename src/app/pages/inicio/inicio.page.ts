@@ -58,6 +58,30 @@ export class InicioPage implements OnInit {
       name: 'Grid - Rows',
       redirectTo: '/grid'
     }
+    ,
+    {
+      icon: 'infinite',
+      name: 'Infinite - Scroll',
+      redirectTo: '/infinite-scroll'
+    }
+    ,
+    {
+      icon: 'hammer',
+      name: 'Input Forms',
+      redirectTo: '/input'
+    }
+    ,
+    {
+      icon: 'list',
+      name: 'Listas - Sliding',
+      redirectTo: '/list'
+    }
+    ,
+    {
+      icon: 'reorder',
+      name: 'Listas - ReOrder',
+      redirectTo: '/list-reorder'
+    }
   ]
 
   constructor() { }
