@@ -1,0 +1,22 @@
+<ion-menu side="start" menuId="primerMenu" contentId="principal">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu Principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+
+      <!-- ion-menu-toggle  para que desaparezca el menu despues de una accion -->
+      <ion-menu-toggle>
+        <!--como  componente es un observable . se debe pasar por el PIPE async , para poder usarlo con ngFor -->
+        <ion-item *ngFor="let c of componentes| async" [routerLink]="c.redirectTo" detail>
+          <!-- DETAIL , le dice a material design que es un elemento que se puede hacer click-->
+          <ion-icon slot="start" [name]="c.icon"></ion-icon>
+          <ion-label text-capitalize>{{c.name}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    
+    </ion-list>
+  </ion-content>
+</ion-menu>

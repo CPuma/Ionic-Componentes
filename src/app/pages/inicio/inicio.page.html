@@ -1,14 +1,26 @@
 <ion-header no-border>
   <ion-toolbar>
-    <ion-title>Componentes</ion-title>
+    <ion-buttons slot="start">
+      <!-- Forma 'dIFICIL' -->
+      <!-- <ion-button (click)="toggleMenu()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button> -->
+      <!-- ============= -->
+
+      <!-- Forma Facil. SIN event click -->
+      <ion-menu-button color="primary" menu="primerMenu"></ion-menu-button>
+
+    </ion-buttons>
+    <ion-title color="primary">Componentes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let c of componentes" [routerLink]="c.redirectTo" detail>
+    <!--como  componente es un observable . se debe pasar por el PIPE async , para poder usarlo con ngFor -->
+    <ion-item *ngFor="let c of componentes|async" [routerLink]="c.redirectTo" detail>
       <!-- DETAIL , le dice a material design que es un elemento que se puede hacer click-->
-      <ion-icon slot="start" [name]="c.icon"></ion-icon>
+      <ion-icon color="secondary" slot="start" [name]="c.icon"></ion-icon>
       <ion-label text-capitalize>{{c.name}}</ion-label>
     </ion-item>
 

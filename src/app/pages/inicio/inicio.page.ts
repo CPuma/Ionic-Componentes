@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { OnInit, Component } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import { Componente } from '../../interfaces/Componente-model';
+import { Observable } from 'rxjs';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-inicio',
@@ -6,93 +10,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
-  componentes: Componente[]=[
-    {
-      icon: 'american-football',
-      name: 'Action Sheet',
-      redirectTo: '/action-sheet'
-    },
-    {
-      icon: 'appstore',
-      name: 'alert',
-      redirectTo: '/alert'
-    },
-    {
-      icon: 'beaker',
-      name: 'avatar',
-      redirectTo: '/avatar'
-    }
-    ,
-    {
-      icon: 'radio-button-on',
-      name: 'botones',
-      redirectTo: '/botones'
-    }
-    ,
-    {
-      icon: 'card',
-      name: 'Cards',
-      redirectTo: '/card'
-    }
-    ,
-    {
-      icon: 'checkmark-circle-outline',
-      name: 'CheckBox',
-      redirectTo: '/check'
-    }
-    ,
-    {
-      icon: 'calendar',
-      name: 'DateTime',
-      redirectTo: '/date-time'
-    }
-    ,
-    {
-      icon: 'car',
-      name: 'Fabs',
-      redirectTo: '/fab'
-    }
-    ,
-    {
-      icon: 'grid',
-      name: 'Grid - Rows',
-      redirectTo: '/grid'
-    }
-    ,
-    {
-      icon: 'infinite',
-      name: 'Infinite - Scroll',
-      redirectTo: '/infinite-scroll'
-    }
-    ,
-    {
-      icon: 'hammer',
-      name: 'Input Forms',
-      redirectTo: '/input'
-    }
-    ,
-    {
-      icon: 'list',
-      name: 'Listas - Sliding',
-      redirectTo: '/list'
-    }
-    ,
-    {
-      icon: 'reorder',
-      name: 'Listas - ReOrder',
-      redirectTo: '/list-reorder'
-    }
-  ]
+  componentes:Observable<Componente[]>;
 
-  constructor() { }
+  constructor( private menuCTRL: MenuController,
+    private dataService:DataService
+     ) { }
 
   ngOnInit() {
+    this.componentes= this.dataService.getMenuOpts();
+  }
+
+  toggleMenu(){
+    this.menuCTRL.toggle();
   }
 
 }
 
-interface Componente{
-  icon:string;
-  name:string;
-  redirectTo:string;
-}

@@ -1,0 +1,71 @@
+[{
+        "icon": "american-football",
+        "name": "Action Sheet",
+        "redirectTo": "/action-sheet"
+    },
+    {
+        "icon": "appstore",
+        "name": "alert",
+        "redirectTo": "/alert"
+    },
+    {
+        "icon": "beaker",
+        "name": "avatar",
+        "redirectTo": "/avatar"
+    },
+    {
+        "icon": "radio-button-on",
+        "name": "botones",
+        "redirectTo": "/botones"
+    },
+    {
+        "icon": "card",
+        "name": "Cards",
+        "redirectTo": "/card"
+    },
+    {
+        "icon": "checkmark-circle-outline",
+        "name": "CheckBox",
+        "redirectTo": "/check"
+    },
+    {
+        "icon": "calendar",
+        "name": "DateTime",
+        "redirectTo": "/date-time"
+    },
+    {
+        "icon": "car",
+        "name": "Fabs",
+        "redirectTo": "/fab"
+    },
+    {
+        "icon": "grid",
+        "name": "Grid - Rows",
+        "redirectTo": "/grid"
+    },
+    {
+        "icon": "infinite",
+        "name": "Infinite - Scroll",
+        "redirectTo": "/infinite-scroll"
+    },
+    {
+        "icon": "hammer",
+        "name": "Input Forms",
+        "redirectTo": "/input"
+    },
+    {
+        "icon": "list",
+        "name": "Listas - Sliding",
+        "redirectTo": "/list"
+    },
+    {
+        "icon": "reorder",
+        "name": "Listas - ReOrder",
+        "redirectTo": "/list-reorder"
+    },
+    {
+        "icon": "refresh",
+        "name": "Loading",
+        "redirectTo": "/loading"
+    }
+]
