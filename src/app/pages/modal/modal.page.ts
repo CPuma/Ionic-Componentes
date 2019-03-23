@@ -23,13 +23,10 @@ export class ModalPage implements OnInit {
 			}
 		});
 		// lanzamos el modal
-    await modal.present();
-    
-    // promesa que escucha cuandl modal se Cierra
-    const{data} = await modal.onDidDismiss();
-    console.log('Retorno del modal', data);
+		await modal.present();
 
-  }
-  
-
+		// promesa que escucha cuandl modal se Cierra
+		const { data } = await modal.onDidDismiss();
+		console.log('Retorno del modal', data);
+	}
 }
